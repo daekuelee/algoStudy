@@ -15,4 +15,5 @@ int lis(const vector<int> &a){
 		ret = std::max(ret, 1 + lis(b));
 	}
 	return (ret);
+	vector<int > a = a;
 }
