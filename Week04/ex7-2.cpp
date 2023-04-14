@@ -8,6 +8,7 @@ int n;
 typedef struct Matrix{
 	int mat[max_n][max_n];
 }	Matrix;
+
 const int Mod = 1000;
 long long b;
 Matrix operator*(const Matrix &a, const Matrix &b){
@@ -27,7 +28,9 @@ Matrix solve(const Matrix &a, long long n){
 	if (n == 1)
 		return (a);
 	if (n % 2 == 1)
-		return (solve(a, n-1) * a);
+		
+		// return (solve(a, n-1) * a);
+		return (solve(a, n/2) * solve(a, n-n/2));
 	Matrix half = solve(a, n/2);
 	return (half * half );
 }

@@ -22,8 +22,8 @@ void	makeComb(int k, int cur){
 		// 다음 꺼 찾기 
 		makeComb(k + 1, i + 1);
 	}
-
 }
+
 int main(void){
 	ios::sync_with_stdio(0); cin.tie(0);
 

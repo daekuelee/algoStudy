@@ -14,6 +14,7 @@ double shortestPath(vector<int>& path, vector<bool>& visited,
 double currentLength) {
 	if (path.size() == n)
 		return currentLength + dist[path[0]][path.back()];
+		
 	double ret = INF;
 	for (int next = 0; next < n; ++next) {
 		if (visited[next]) continue ;
