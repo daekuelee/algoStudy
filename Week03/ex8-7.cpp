@@ -39,8 +39,7 @@ bool optMatch(int wpos, int spos){
 		return (ret = optMatch(wpos+1, spos+1));
 
 	if (W[wpos] == '*'){
-		if (optMatch(wpos, spos) || 
-		optMatch(wpos, spos+1))
+		if (optMatch(wpos, spos) || optMatch(wpos, spos+1))
 			return (ret = true);
 	}
 	return (ret = false);
